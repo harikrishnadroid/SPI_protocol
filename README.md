@@ -57,11 +57,9 @@ and sends data back through MISO.
 
 The complete design contains two major RTL blocks:
 
-```text
-            <img width="2752" height="1536" alt="SPI_Master-Slave_Verilog_Implementation" src="https://github.com/user-attachments/assets/992017df-9a38-4ce6-9c44-eecfb263a0b9" />
+ <img width="2752" height="1536" alt="SPI_Master-Slave_Verilog_Implementation" src="https://github.com/user-attachments/assets/992017df-9a38-4ce6-9c44-eecfb263a0b9" />
 
 
-```
 
 The Master and Slave communicate through:
 
