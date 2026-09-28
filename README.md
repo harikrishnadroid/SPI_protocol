@@ -58,32 +58,8 @@ and sends data back through MISO.
 The complete design contains two major RTL blocks:
 
 ```text
-                 +----------------------+
-                 |      SPI MASTER      |
-                 |                      |
- PCLK ---------->| Clock Generator      |
- RST ----------->| FSM                  |
- EN ------------>| Transfer Control     |
- TX DATA -------->| TX Shift Register   |
- MISO <-----------| RX Shift Register   |
-                 |                      |
-                 +----+------------+----+
-                      |            |
-                     MOSI         SCLK
-                      |            |
-                      |            |
-                      v            v
-                 +----------------------+
-                 |      SPI SLAVE       |
-                 |                      |
-                 | RX Shift Registers   |
-                 | TX Shift Registers   |
-                 | CPOL/CPHA Logic      |
-                 | MISO Selection       |
-                 +----------------------+
-                           |
-                           |
-                          MISO
+            <img width="2752" height="1536" alt="SPI_Master-Slave_Verilog_Implementation" src="https://github.com/user-attachments/assets/05be7a2a-803e-49e2-b65c-4b7d6c2fa175" />
+
 ```
 
 The Master and Slave communicate through:
@@ -1657,4 +1633,3 @@ CPOL and CPHA are used to determine the SPI clock behavior and the appropriate s
 The Slave uses separate transmit/receive paths and `MISO1`/`MISO2` handling to implement mode-dependent serial transmission.
 
 Overall, this project provided practical experience in **Verilog RTL design, SPI protocol implementation, FSM design, clock generation, shift-register design, timing analysis, and waveform-based debugging**.
-<img width="2752" height="1536" alt="SPI_Master-Slave_Interface_Architecture" src="https://github.com/user-attachments/assets/6f430185-0341-42e9-bc40-a65c73d29ce3" />
